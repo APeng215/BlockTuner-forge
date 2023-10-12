@@ -5,8 +5,11 @@
   "compatibilityLevel": "JAVA_8",
   "refmap": "BlockTuner.refmap.json",
   "mixins": [
+
   ],
   "client": [
+    "NoteBlockMixinClient",
+    "NoteNameMixinClient"
   ],
   "injectors": {
     "defaultRequire": 1
