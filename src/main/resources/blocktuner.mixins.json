@@ -3,13 +3,14 @@
   "minVersion": "0.8",
   "package": "com.apeng.blocktuner.mixin",
   "compatibilityLevel": "JAVA_8",
-  "refmap": "BlockTuner.refmap.json",
+  "refmap": "blocktuner.refmap.json",
   "mixins": [
 
   ],
   "client": [
     "NoteBlockMixinClient",
     "NoteNameMixinClient"
+
   ],
   "injectors": {
     "defaultRequire": 1
