@@ -28,7 +28,7 @@ public class BlockTunerCommands {
             return -1;
         }
         world.setBlockAndUpdate(pos, world.getBlockState(pos).setValue(NoteBlock.NOTE, note));
-        // please do not change this to world.addSyncedBlockEvent() as it does not allow chords to be played.
+        // please do not change this to world.blockEvent() as it does not allow chords to be played.
         world.getBlockState(pos).triggerEvent(world, pos, 0, 0);
         world.sendParticles(ParticleTypes.NOTE, pos.getX() + 0.5D, pos.getY() + 1.2D, pos.getZ() + 0.5D, 0, (double) note / 24.0D, 0.0D, 0.0D, 1.0D);
         world.gameEvent(source.getEntity(), GameEvent.NOTE_BLOCK_PLAY, pos);
