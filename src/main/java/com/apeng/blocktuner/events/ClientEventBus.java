@@ -17,11 +17,6 @@ public class ClientEventBus {
             NoteNameHud.render(event.getGuiGraphics());
         }
 
-        @SubscribeEvent
-        public static void renderNoteBlockItemName(ItemTooltipEvent event) {
-            event.getToolTip().add(Component.literal("sasas"));
-        }
-
     }
 
     @Mod.EventBusSubscriber(modid = BlockTuner.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
