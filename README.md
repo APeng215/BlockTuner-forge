@@ -8,8 +8,6 @@ If you want a fabric version, please visit [this page](https://github.com/xwjcoo
 
 If you want the data pack for older versions of Minecraft, please visit [this page](https://github.com/xwjcool123/blocktuner).
 
-This mod requires Forge API.
-
 ## Instructions
 
 ### Installation
@@ -22,11 +20,11 @@ You can get the latest version [here](https://github.com/APeng215/BlockTuner-for
 
 ### How to Use BlockTuner
 
-`Ctrl` + Right clock on a note block to open up tuning UI. Placing a note block while holding `Ctrl` also opens the UI automatically.
+`Ctrl` + `Right click` on a note block to open up tuning UI. Placing a note block while holding `Ctrl` also opens the UI automatically.
 
 `Ctrl` to show the note of the note block at crosshair.
 
-`Ctrl` + middle click on note blocks to pick up readily tuned note blocks.
+`Ctrl` + `Middle click` on note blocks to pick up readily tuned note blocks.
 
 Right click note blocks with blaze rods to play with right clicks without tuning.
 
