@@ -143,9 +143,13 @@ public class TuningScreen extends Screen {
 
     @Override
     public void render(GuiGraphics context, int mouseX, int mouseY, float delta) {
-        this.renderBackground(context);
-        this.drawBackground(context, delta, mouseX, mouseY);
         super.render(context, mouseX, mouseY, delta);
+    }
+
+    @Override
+    public void renderBackground(GuiGraphics context, int mouseX, int mouseY, float delta) {
+        super.renderBackground(context, mouseX, mouseY, delta);
+        this.drawBackground(context, delta, mouseX, mouseY);
     }
 
     @Override
@@ -259,9 +263,11 @@ public class TuningScreen extends Screen {
 
         @Override
         public void render(GuiGraphics context, int mouseX, int mouseY, float delta) {
-            super.render(context, mouseX, mouseY, delta);
-            if (this.isHovered) {
-                context.renderTooltip(TuningScreen.this.font, Component.literal(NoteNames.get(note)), TuningScreen.this.x - 8, TuningScreen.this.y - 2);
+            if (visible) {
+                renderWidget(context, mouseX, mouseY, delta);
+                if (isHovered) {
+                    context.renderTooltip(TuningScreen.this.font, Component.literal(NoteNames.get(note)), TuningScreen.this.x - 8, TuningScreen.this.y - 2);
+                }
             }
         }
 
@@ -309,6 +315,12 @@ public class TuningScreen extends Screen {
     class BlackKeyWidget extends PianoKeyWidget {
         public BlackKeyWidget(int x, int y, int note) {
             super(x, y, 16, 38, note);
+        }
+
+        @Override
+        public void render(GuiGraphics context, int mouseX, int mouseY, float delta) {
+            this.isHovered = mouseX >= this.getX() && mouseY >= this.getY() && mouseX < this.getX() + this.width && mouseY < this.getY() + this.height;
+            super.render(context, mouseX, mouseY, delta);
         }
 
         @Override

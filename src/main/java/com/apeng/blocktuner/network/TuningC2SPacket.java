@@ -9,9 +9,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.NoteBlock;
-import net.minecraftforge.network.NetworkEvent;
-
-import java.util.function.Supplier;
+import net.minecraftforge.event.network.CustomPayloadEvent;
 
 public class TuningC2SPacket {
     BlockPos pos;
@@ -34,10 +32,9 @@ public class TuningC2SPacket {
         buf.writeBlockPos(this.pos);
     }
 
-    public void handler(Supplier<NetworkEvent.Context> supplier) {
-        NetworkEvent.Context context = supplier.get();
-        Level world = supplier.get().getSender().level();
+    public void handler(CustomPayloadEvent.Context context) {
         ServerPlayer player = context.getSender();
+        Level world = context.getSender().level();
 
         if (world.getBlockState(pos).getBlock() != Blocks.NOTE_BLOCK) {
             return;
