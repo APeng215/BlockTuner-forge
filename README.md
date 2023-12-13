@@ -1,3 +1,6 @@
+<img src="src/main/resources/icon.png" align="right" width="180px"/>
+
+
 # BlockTuner (Forge Mod)
 
 ## About
