@@ -2,6 +2,9 @@
 
 # BlockTuner (Forge Mod)
 
+[![Static Badge](https://img.shields.io/badge/CurseForge-download-F16436?logo=CurseForge)](https://www.curseforge.com/minecraft/mc-mods/blocktuner-forge)
+[![Static Badge](https://img.shields.io/badge/Modrinth-download-00AF5C?logo=Modrinth)](https://modrinth.com/mod/blocktuner-forge)
+
 This is the forge version of BlockTuner. 
 
 If you want a fabric version, please visit [this page](https://github.com/xwjcool123/BlockTunerMod).
