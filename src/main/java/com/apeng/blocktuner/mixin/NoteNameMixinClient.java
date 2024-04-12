@@ -7,7 +7,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.network.chat.Style;
-import net.minecraft.network.chat.contents.LiteralContents;
+import net.minecraft.network.chat.contents.PlainTextContents;
 import net.minecraft.network.chat.contents.TranslatableContents;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -36,7 +36,7 @@ public class NoteNameMixinClient {
                 }
             }
             cir.setReturnValue(MutableComponent.create(new TranslatableContents(((ItemStack) (Object) this).getDescriptionId(), null, null))
-                    .append(MutableComponent.create(new LiteralContents(" (" + NoteNames.get(note) + ", " + note + ")")).setStyle(NOTE_STYLE)));
+                    .append(MutableComponent.create(new PlainTextContents.LiteralContents(" (" + NoteNames.get(note) + ", " + note + ")")).setStyle(NOTE_STYLE)));
         }
     }
 }
